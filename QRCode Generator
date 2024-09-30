@@ -1,0 +1,102 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOsJGASmp2o8hTZXD7C4eNf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Nelsonc22/Nelsonc22/blob/main/QRCode%20Generator\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "szhL8clpd8vz"
+      },
+      "outputs": [],
+      "source": [
+        "#description: Generating a QR code\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pip install qrcode"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B5t4H4HIeSx9",
+        "outputId": "3d2fdb06-6c0c-489d-bffa-552e70ddfd1d"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: qrcode in /usr/local/lib/python3.10/dist-packages (7.4.2)\n",
+            "Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from qrcode) (4.12.2)\n",
+            "Requirement already satisfied: pypng in /usr/local/lib/python3.10/dist-packages (from qrcode) (0.20220715.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#import the library\n",
+        "import qrcode"
+      ],
+      "metadata": {
+        "id": "vmHpFiYdeyt0"
+      },
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#generate the qr code\n",
+        "img = qrcode.make(\"https://open.spotify.com/artist/2LIWSuCUXBOqu0musKQ6B8\")"
+      ],
+      "metadata": {
+        "id": "PTm3CWyXfEg2"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#save the image as an image file like (.jpg)\n",
+        "img.save(\"SpotifyQRcode.jpg\")"
+      ],
+      "metadata": {
+        "id": "4NYvhr8CgLjU"
+      },
+      "execution_count": 6,
+      "outputs": []
+    }
+  ]
+}
